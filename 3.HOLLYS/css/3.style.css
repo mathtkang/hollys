@@ -1,0 +1,104 @@
+*{padding:0; margin:0;}
+a{
+    color:inherit; 
+    text-decoration:none;
+}
+li{
+    list-style:none;
+}
+/* 여기까지는 그냥 기본셋이라고 놓고시작하면 됨 */
+.wrap{
+    width:940px;
+    margin:0 auto;
+    position:relative;
+}
+h1{
+    padding-top:55px;
+    /* width: 940px;
+    height: 43px; */
+    margin:0 auto;
+    /* 왜 h1이 중앙배열 안되지용? */
+}
+header .util{
+    position: absolute;
+    top:15px;
+    right: 20px;
+}
+.util li{
+    float: left;
+    margin-right: 25px;
+    font-size:12px;
+    color:gray;
+}
+.util li:last-child{
+    margin-right: 0px;
+}
+.gnb ul{
+    position: absolute;
+    top:70px;
+    right:50%;
+}
+.gnb li{
+    float: left;
+    margin:10px 35px;
+}
+header ul:after{
+    content:"";
+    clear:both; 
+    display:block;
+    }
+
+.slider{
+    background-image:url(../images/mainbn.jpg);
+    display:block;
+    /* display:block을 해줘야 inline의 속성(해당글자의 배경만 나타지는 것)이 아닌
+     block의 속성(그 글자의 줄 전부 나타나지는 것)으로 변환된다 */
+    width:1263.33px;
+    height:480px;
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.information{
+    width:940px;
+    margin-top:30px;
+}
+.information h3{
+    height: 22.33px;
+}
+.information p{
+    font-size: 12px;
+    margin-top:12px;
+}
+/* 00000000000000000000000 여기부텨시작 */
+.info{
+    float: left;
+    margin-left:35px;
+}
+.info:first-child{
+    margin-left:0;
+}
+.info:after{
+    content:"";
+    clear:both; 
+    display:block;
+}
+
+.container{
+    width:205px;
+    /* height: 20.83px; */
+ 
+}
+
+.containery{
+    width:445px;
+    
+}
+.box{
+    float: left;
+}
+.box:after{
+    content:"";
+    clear:both; 
+    display:block;
+}
