@@ -12,12 +12,25 @@ li{
     margin:0 auto;
     position:relative;
 }
+.subutil{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.subutil li{
+    float: left;
+}
+.subutil li:nth-child(2){
+    margin-top:12px;
+    margin-left:15px;
+}
 h1{
     padding-top:55px;
     /* width: 940px;
     height: 43px; */
-    margin:0 auto;
+    /* margin:0 auto; */
     /* 왜 h1이 중앙배열 안되지용? */
+    text-align:center;
 }
 header .util{
     position: absolute;
@@ -62,6 +75,7 @@ header ul:after{
 .information{
     width:940px;
     margin-top:30px;
+    margin-bottom:30px;
 }
 .information h3{
     height: 22.33px;
@@ -70,7 +84,6 @@ header ul:after{
     font-size: 12px;
     margin-top:12px;
 }
-/* 00000000000000000000000 여기부텨시작 */
 .info{
     float: left;
     margin-left:35px;
@@ -78,27 +91,98 @@ header ul:after{
 .info:first-child{
     margin-left:0;
 }
-.info:after{
+.information:after{
     content:"";
     clear:both; 
     display:block;
 }
-
 .container{
     width:205px;
-    /* height: 20.83px; */
- 
+    text-align:center;
 }
-
+h3, p{
+    text-align: left;
+}
+.container:first-child h3{
+    margin-bottom:30px;
+}
+/* ////////////////////// */
 .containery{
     width:445px;
-    
 }
 .box{
     float: left;
+    width:140px;
+    height: 120px;
+    text-align:center;
+    background-image: url(../images/bg_bar.png);
+    background-repeat:no-repeat;
+    position: relative;
+}
+.box:first-child{
+    background-image:none;
+}
+.containery ul{
+    margin-top:20px;
 }
 .box:after{
     content:"";
     clear:both; 
     display:block;
+}
+.box p{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    text-align: center;
+    /* 다시해보기!!!!!!!!!!!!!! */
+}
+.container:last-child img{
+    margin-top:16px;
+}
+/* 여기서부터 시작 */
+.subbanner{
+    margin-top:30px;
+}
+.subbanner li{
+    float: left;
+}
+.subbanner ul:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.container2{
+    margin-top:30px;
+}
+.ul_left>li{
+    float: left;
+    margin-right: 45px;
+    width:195px;
+}
+/* {float:none;}  오 이런식으로도 되는구나!! -> 대신에 바로 밑자손선택 : '>' 사용 */
+.ul_left:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+.ul_right>li{
+    float: left;
+    /* margin-right: 45px; */
+}
+.ul_right:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+.ul_left h3{
+    margin-bottom: 12px;
+}
+.con_ul p{
+    font-size:12px;
+    color: #6f6f6f;
+/* html에서 90-96 왜 안먹지? */
 }
