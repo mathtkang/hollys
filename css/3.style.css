@@ -167,7 +167,10 @@ h3, p{
     display: block;
     clear:both;
 }
-
+.ul_left li p img{
+    vertical-align: middle;
+    /* 그림의 세로(수직) 중앙정렬 */
+}
 .ul_right>li{
     float: left;
     /* margin-right: 45px; */
@@ -184,7 +187,26 @@ h3, p{
 .con_ul p{
     font-size:12px;
     color: #6f6f6f;
-/* html에서 90-96 왜 안먹지? */
+}
+.ul_left ul a{
+    font-size:12px;
+    color: #6f6f6f;
+    display: block;
+    /* a는 inline요소니까 블럭준다 */
+    width:144px;
+    float: left;
+    /* 밑의 3친구 3종세트 */
+    white-space: nowrap;
+    /* 줄바꿈안되도록-위에 */
+    overflow: hidden;
+    /* 넘치면 보여주지말고 숨겨라 */
+    text-overflow: ellipsis;
+    /* 문자에 대해서-넘치면 말줄임표해라 */
+}
+.date{
+    float: right;
+    font-size:12px;
+    color: #6f6f6f;
 }
 .con_ul ul{
     float: left;
@@ -196,7 +218,6 @@ h3, p{
 }
 .ul_right{
     margin-top:20px;
-    
 }
 .ul_right li{
     padding:0 5px;
@@ -244,16 +265,31 @@ h3, p{
     margin-top:25px;
     font-size: 12px;
     color:#6f6f6f;
-    width:205px;
 }
 .con3_live li{
     margin-right:30px;
-    /* float: left; */
+    float: left;
+    /* width:205px; */
+
+    /* display:inline-block; */
+    
+}
+.con3_live p{
+    width:140px;
+    /* float: right; */
+}
+.con3_live img{
+    margin-right:15px;
 }
 .con3_live div{
     float: left;
 }
 .con3_live li:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.con3_live:after{
     content:"";
     display: block;
     clear:both;
@@ -266,7 +302,6 @@ h3, p{
     display: block;
     clear:both;
 } */
-/* ?????????????????????????????????????????????????????????? */
 
 footer{
     background-image: url(../images/bg_pat.png);
@@ -274,9 +309,9 @@ footer{
 }
 .footer_container{
     padding-top:20px;
-    /* 여기서는 margin-top안먹고 padding이 먹음 - 왜그럴까??
-     margin을 주면 배경포함해서 이동하게 되어 배경 위에 공간이 생기는 것이고
-     padding을 주면 배경은 때놓고 생각해서 (우리가 하고싶은것을 이룰수있음) */
+    /*  Q. 여기서는 margin-top안먹고 padding이 먹음 - 왜그럴까??
+    A. margin을 주면 배경포함해서 이동하게 되어 배경 위에 공간이 생기는 것이고
+    padding을 주면 배경은 때놓고 생각해서 (우리가 하고싶은것을 이룰수있음) */
     padding-bottom: 60px;
 }
 .footer_container ul{
