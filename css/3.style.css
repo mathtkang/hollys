@@ -6,7 +6,13 @@ a{
 li{
     list-style:none;
 }
-/* 여기까지는 그냥 기본셋이라고 놓고시작하면 됨 */
+p{
+    font-size: 12px;
+    color:#6f6f6f;
+}
+
+/* step1 */
+
 .wrap{
     width:940px;
     margin:0 auto;
@@ -26,10 +32,6 @@ li{
 }
 h1{
     padding-top:55px;
-    /* width: 940px;
-    height: 43px; */
-    /* margin:0 auto; */
-    /* 왜 h1이 중앙배열 안되지용? */
     text-align:center;
 }
 header .util{
@@ -60,27 +62,26 @@ header ul:after{
     clear:both; 
     display:block;
     }
-
-.slider{
+.mainbanner{
+    width:100%;
+    height: 480px;
     background-image:url(../images/mainbn.jpg);
-    display:block;
-    /* display:block을 해줘야 inline의 속성(해당글자의 배경만 나타지는 것)이 아닌
-     block의 속성(그 글자의 줄 전부 나타나지는 것)으로 변환된다 */
-    width:1263.33px;
-    height:480px;
     background-position: center;
     background-size:cover;
     background-repeat:no-repeat;
 }
-.information{
+
+/* step2 */
+
+.container1{
     width:940px;
-    margin-top:30px;
-    margin-bottom:30px;
+    margin-top:40px;
+    margin-bottom:20px;
 }
-.information h3{
+.info h3{
     height: 22.33px;
 }
-.information p{
+.info p{
     font-size: 12px;
     margin-top:12px;
 }
@@ -91,23 +92,23 @@ header ul:after{
 .info:first-child{
     margin-left:0;
 }
-.information:after{
+.container1:after{
     content:"";
     clear:both; 
     display:block;
 }
-.container{
+.fran{
     width:205px;
     text-align:center;
 }
-h3, p{
+.container1 h3{
     text-align: left;
+    padding-bottom: 2px;
 }
-.container:first-child h3{
+.fran h3{
     margin-bottom:30px;
 }
-/* ////////////////////// */
-.containery{
+.mall{
     width:445px;
 }
 .box{
@@ -121,8 +122,12 @@ h3, p{
 }
 .box:first-child{
     background-image:none;
+    padding-top:5px;
 }
-.containery ul{
+.box:last-child{
+    padding-top:5px;
+}
+.mall ul{
     margin-top:20px;
 }
 .box:after{
@@ -136,12 +141,10 @@ h3, p{
     left:0;
     width:100%;
     text-align: center;
-    /* 다시해보기!!!!!!!!!!!!!! */
 }
-.container:last-child img{
-    margin-top:16px;
+.store>p{
+    margin-bottom:20px;
 }
-/* 여기서부터 시작 */
 .subbanner{
     margin-top:30px;
 }
@@ -153,15 +156,31 @@ h3, p{
     display: block;
     clear:both;
 }
+
+/* step3 */
+
 .container2{
     margin-top:30px;
 }
-.ul_left>li{
+.container2 p{
+    font-size:12px;
+    color: #6f6f6f;
+}
+.container2 div{
+    float: left;
+}
+.container2:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.ul_left>div{
     float: left;
     margin-right: 45px;
     width:195px;
 }
-/* {float:none;}  오 이런식으로도 되는구나!! -> 대신에 바로 밑자손선택 : '>' 사용 */
+/* {float:none;}  오 이런식으로도 되는구나!! 
+    -> 대신에 바로 밑자손선택 : '>' 사용 */
 .ul_left:after{
     content:"";
     display: block;
@@ -171,47 +190,47 @@ h3, p{
     vertical-align: middle;
     /* 그림의 세로(수직) 중앙정렬 */
 }
-.ul_right>li{
-    float: left;
-    /* margin-right: 45px; */
-}
-.ul_right:after{
-    content:"";
-    display: block;
-    clear:both;
-}
-
 .ul_left h3{
     margin-bottom: 12px;
 }
-.con_ul p{
-    font-size:12px;
-    color: #6f6f6f;
+.ul_left .news ul li{
+    padding-bottom:20px;
 }
-.ul_left ul a{
-    font-size:12px;
-    color: #6f6f6f;
-    display: block;
-    /* a는 inline요소니까 블럭준다 */
+
+.ul_left .news li a{
+    /* a가 아닌 li에 width:144px 주면 안된다
+    li태그는 한줄 전체를 의미, 너비 144는 a가 의미 */
     width:144px;
+    font-size:12px;
+    color: #6f6f6f;
+    display: block;         /* a는 inline요소니까 블럭준다 */
     float: left;
-    /* 밑의 3친구 3종세트 */
-    white-space: nowrap;
-    /* 줄바꿈안되도록-위에 */
-    overflow: hidden;
-    /* 넘치면 보여주지말고 숨겨라 */
-    text-overflow: ellipsis;
-    /* 문자에 대해서-넘치면 말줄임표해라 */
+    white-space: nowrap;    /* 줄바꿈안되도록-위에 */
+    overflow: hidden;       /* 넘치면 보여주지말고 숨겨라 */
+    text-overflow: ellipsis;/* 문자에 대해서-넘치면 말줄임표해라 */
 }
-.date{
+.ul_left span{
     float: right;
     font-size:12px;
     color: #6f6f6f;
 }
-.con_ul ul{
+/* 재생버튼_위아래정렬, 간격조절 */
+.container2 .academy p img{
+    vertical-align: middle;
+    margin-right: 2px;
+}
+.container2 .recruit p img{
+    vertical-align: middle;
+    margin-right: 2px;
+}
+.container2 .news h3 .img{
+    vertical-align: middle;
+    margin-left:5px;
+}
+.ul_right>li{
     float: left;
 }
-.con_ul:after{
+.ul_right:after{
     content:"";
     display: block;
     clear:both;
@@ -235,13 +254,15 @@ h3, p{
     padding-right:0;
 }
 
+/* step4 */
+
 .container3{
     margin-top:40px;
     border-top-color:#b5121b;
     border-top-style: solid;
     border-top-width: 2px;
     padding-top:30px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 .sns li{
     float: left;
@@ -252,6 +273,7 @@ h3, p{
     display: block;
     clear:both;
 }
+
 .con3_title div{
     float: left;
     margin-right:15px;
@@ -261,6 +283,7 @@ h3, p{
     display: block;
     clear:both;
 }
+
 .con3_live{
     margin-top:25px;
     font-size: 12px;
@@ -268,15 +291,10 @@ h3, p{
 }
 .con3_live li{
     margin-right:30px;
-    float: left;
-    /* width:205px; */
-
-    /* display:inline-block; */
-    
+    float: left;    
 }
 .con3_live p{
     width:140px;
-    /* float: right; */
 }
 .con3_live img{
     margin-right:15px;
@@ -297,11 +315,8 @@ h3, p{
 .blue{
     color:#08f;
 }
-/* .con3_live:after{
-    content:"";
-    display: block;
-    clear:both;
-} */
+
+/* step5 */
 
 footer{
     background-image: url(../images/bg_pat.png);
@@ -309,9 +324,6 @@ footer{
 }
 .footer_container{
     padding-top:20px;
-    /*  Q. 여기서는 margin-top안먹고 padding이 먹음 - 왜그럴까??
-    A. margin을 주면 배경포함해서 이동하게 되어 배경 위에 공간이 생기는 것이고
-    padding을 주면 배경은 때놓고 생각해서 (우리가 하고싶은것을 이룰수있음) */
     padding-bottom: 60px;
 }
 .footer_container ul{
@@ -319,7 +331,6 @@ footer{
 }
 .footer_container li{
     float: left;
-    margin-right: 6px;
     margin-bottom: 20px;
 }
 .footer_container ul:after{
@@ -327,12 +338,19 @@ footer{
     display: block;
     clear:both;
 }
-address{
-    color:#ababab;
+.footer_container li:after{
+    content:'|';
+    /* 컨텐트속성은
+    속성값을 해주고싶은 태그의 after를 selector로 두고 사용한다 */
+    margin-right:5px;
+    margin-left:5px;
+}
+.footer_container address{
+    color:rgba(255,255,255,0.5);
     font-size: 13px;
     font-style: normal;
-    font-weight: lighter;
+    /* font-weight: lighter; */
 }
-address p:last-child{
+.footer_container address p:last-child{
     margin-top:20px;
 }
